@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		16B053FA20168F6700EF59AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B053F920168F6700EF59AD /* AppDelegate.swift */; };
-		16B053FC20168F6700EF59AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B053FB20168F6700EF59AD /* ViewController.swift */; };
 		16B053FF20168F6700EF59AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B053FD20168F6700EF59AD /* Main.storyboard */; };
 		16B0540120168F6700EF59AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16B0540020168F6700EF59AD /* Assets.xcassets */; };
 		16B0540420168F6700EF59AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16B0540220168F6700EF59AD /* LaunchScreen.storyboard */; };
+		16B0540C2016953A00EF59AD /* FlashlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B0540B2016953A00EF59AD /* FlashlightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		16B053F620168F6700EF59AD /* Flashlight_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashlight_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16B053F920168F6700EF59AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16B053FB20168F6700EF59AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16B053FE20168F6700EF59AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16B0540020168F6700EF59AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16B0540320168F6700EF59AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		16B0540520168F6700EF59AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16B0540B2016953A00EF59AD /* FlashlightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		16B053F820168F6700EF59AD /* Flashlight_v2 */ = {
 			isa = PBXGroup;
 			children = (
-				16B053F920168F6700EF59AD /* AppDelegate.swift */,
-				16B053FB20168F6700EF59AD /* ViewController.swift */,
-				16B053FD20168F6700EF59AD /* Main.storyboard */,
-				16B0540020168F6700EF59AD /* Assets.xcassets */,
-				16B0540220168F6700EF59AD /* LaunchScreen.storyboard */,
-				16B0540520168F6700EF59AD /* Info.plist */,
+				16B0540E2016956700EF59AD /* UI */,
+				16B0540F2016956D00EF59AD /* View Controllers */,
+				16B0540D2016955A00EF59AD /* Resources */,
 			);
 			path = Flashlight_v2;
+			sourceTree = "<group>";
+		};
+		16B0540D2016955A00EF59AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				16B053F920168F6700EF59AD /* AppDelegate.swift */,
+				16B0540020168F6700EF59AD /* Assets.xcassets */,
+				16B0540520168F6700EF59AD /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		16B0540E2016956700EF59AD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				16B053FD20168F6700EF59AD /* Main.storyboard */,
+				16B0540220168F6700EF59AD /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		16B0540F2016956D00EF59AD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16B0540B2016953A00EF59AD /* FlashlightViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16B053FC20168F6700EF59AD /* ViewController.swift in Sources */,
+				16B0540C2016953A00EF59AD /* FlashlightViewController.swift in Sources */,
 				16B053FA20168F6700EF59AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
