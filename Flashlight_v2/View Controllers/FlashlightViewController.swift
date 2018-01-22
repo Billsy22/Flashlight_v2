@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FlashlightViewController: UIViewController {
-
+    
     // MARK:    Properties
     
     var isOn = true
@@ -36,12 +37,34 @@ class FlashlightViewController: UIViewController {
         return isOn
     }
     
+    // Using the LED
+    func toggleFlash() {
+        guard let device = AVCaptureDevice.default(for: AVMediaType.video) else { return }
+        if (device.hasTorch) {
+            do {
+                try device.lockForConfiguration()
+                if (device.torchMode == AVCaptureDevice.TorchMode.on) {
+                    device.torchMode = AVCaptureDevice.TorchMode.off
+                } else {
+                    do {
+                        try device.setTorchModeOn(level: 1.0)
+                    } catch {
+                        print(error)
+                    }
+                }
+                device.unlockForConfiguration()
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
     // MARK:    Actions
     
     // On button tapped
     @IBAction func buttonTapped(_ sender: Any) {
         isOn = !isOn
         toggleIsOn()
+        toggleFlash()
     }
 }
-
